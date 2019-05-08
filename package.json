@@ -13,12 +13,17 @@
     "type": "git",
     "url": "git+https://github.com/WWDCScholars/web-cloudkit.git"
   },
-  "main": "index.js",
-  "module": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
   "scripts": {
+    "build": "tsc",
     "release": "standard-version",
     "prerelease": "standard-version --prerelease pre"
   },
+  "files": [
+    "src/**",
+    "dist/**"
+  ],
   "dependencies": {
     "events": "^3.0.0",
     "lodash.merge": "^4.6.1",
@@ -29,7 +34,9 @@
     "@types/events": "^3.0.0",
     "@types/lodash.merge": "^4.6.6",
     "@types/node": "^12.0.0",
-    "standard-version": "^6.0.1"
+    "nuxt": "^2.6.3",
+    "standard-version": "^6.0.1",
+    "typescript": "^3.4.5"
   },
   "peerDependencies": {
     "nuxt": "^2.0.0"

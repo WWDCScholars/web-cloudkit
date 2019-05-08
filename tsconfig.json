@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
+    "target": "es6",
+    "module": "es6",
     "moduleResolution": "node",
     "lib": [
       "esnext",
@@ -10,15 +10,23 @@
     ],
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "allowJs": true,
     "sourceMap": true,
     "strict": true,
     "noImplicitAny": false,
-    "noEmit": true,
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
     "baseUrl": ".",
+    "paths": {
+      "wwdcscholars-cloudkit": ["./src"]
+    },
     "types": [
       "@types/node",
       "@nuxt/vue-app"
     ]
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
