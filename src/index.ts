@@ -1,5 +1,5 @@
-/// <reference path="../types/vue.d.ts" />
-/// <reference path="../types/cloudkit.d.ts" />
+import '../types/vue.d.ts'
+import '../types/cloudkit.d.ts'
 
 export { default } from './nuxt/nuxt-module'
 
