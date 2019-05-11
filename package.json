@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/WWDCScholars/web-cloudkit.git"
   },
-  "main": "src/index.ts",
+  "module": "src/index.ts",
   "typings": "types/index.d.ts",
   "scripts": {
     "release": "standard-version",
