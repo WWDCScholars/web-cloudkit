@@ -20,7 +20,8 @@
     "prerelease": "standard-version --prerelease pre"
   },
   "files": [
-    "src/**"
+    "src/**",
+    "types/**"
   ],
   "dependencies": {
     "events": "^3.0.0",
