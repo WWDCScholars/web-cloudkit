@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-pre.3](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.2...v1.0.0-pre.3) (2019-05-11)
+
+
+### Features
+
+* Added typescript build ([e240518](https://github.com/WWDCScholars/web-cloudkit/commit/e240518))
+
+
+
 ## [1.0.0-pre.2](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.1...v1.0.0-pre.2) (2019-05-11)
 
 
