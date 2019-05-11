@@ -1,11 +1,6 @@
 import merge from 'lodash.merge'
 import { ck, CloudKit } from '.'
 
-declare module 'tsl-apple-cloudkit' {
-  type RecordToCreateBase = Pick<RecordToCreate, Exclude<keyof RecordToCreate, 'recordType'>>
-  type RecordFields = { [name: string]: RecordField }
-}
-
 interface RecordBuilder<R> {
   recordType: string
   new(): R

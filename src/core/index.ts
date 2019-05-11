@@ -1,5 +1,3 @@
-/// <reference path="./Query.d.ts" />
-
 import CKConnection from './CKConnection'
 const ck = new CKConnection()
 export { ck, CKConnection }
