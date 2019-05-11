@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "@wwdcscholars/cloudkit",
   "description": "WWDCScholars CloudKit Interface and Model",
   "version": "1.0.0-pre.2",
