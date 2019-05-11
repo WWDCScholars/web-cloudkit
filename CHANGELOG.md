@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-pre.7](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.6...v1.0.0-pre.7) (2019-05-11)
+
+
+
 ## [1.0.0-pre.6](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.5...v1.0.0-pre.6) (2019-05-11)
 
 
