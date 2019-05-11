@@ -1,4 +1,4 @@
-import { CloudKit, Record, WWDCYearInfo, Field } from '.'
+import { ScholarSocialMedia, WWDCYearInfo, Field, Record, CloudKit } from '.'
 
 export type Gender = ('male' | 'female' | 'other')
 
@@ -16,5 +16,9 @@ export default class Scholar extends Record {
   @Field public socialMedia!: CloudKit.Reference
   @Field public wwdcYearInfos!: CloudKit.Reference[]
   @Field public wwdcYears!: CloudKit.Reference[]
+  @Field public wwdcYearsApproved!: CloudKit.Reference[]
   @Field public gdprConsentAt?: number
+
+  public loadedYearInfos: { [yearRecordName: string]: WWDCYearInfo } = {}
+  public loadedSocialMedia?: ScholarSocialMedia
 }

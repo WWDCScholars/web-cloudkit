@@ -1,4 +1,4 @@
-export { ck, CloudKit, Query, Record, Field } from '../core'
+export { ck, CloudKit, Record, Field } from '../core'
 
 export { default as Users } from './Users'
 export { default as Scholar } from './Scholar'
