@@ -1,8 +1,8 @@
 import merge from 'lodash.merge'
-import { ck, CloudKit, Query } from '.'
+import { ck, CloudKit } from '.'
 
 declare module 'tsl-apple-cloudkit' {
-  type RecordToCreateSimple = Pick<RecordToCreate, Exclude<keyof RecordToCreate, 'recordType'>>
+  type RecordToCreateBase = Pick<RecordToCreate, Exclude<keyof RecordToCreate, 'recordType'>>
   type RecordFields = { [name: string]: RecordField }
 }
 
@@ -68,7 +68,7 @@ export default class Record implements CloudKit.RecordLike {
 
   public static async query<T extends Record>(
     this: RecordBuilder<T>,
-    query: Query,
+    query: CloudKit.QueryBase,
     options?: CloudKit.RecordFetchOptions
   ): Promise<T[]> {
     const records = await ck.queryFromPublicDatabase({
@@ -80,7 +80,7 @@ export default class Record implements CloudKit.RecordLike {
 
   public static async create<T extends Record>(
     this: RecordBuilder<T>,
-    record: CloudKit.RecordToCreateSimple
+    record: CloudKit.RecordToCreateBase
   ): Promise<T> {
     const recordToCreate: CloudKit.RecordToCreate = {
       recordType: this.recordType,
