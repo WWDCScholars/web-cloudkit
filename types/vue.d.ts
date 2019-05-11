@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { CKConnection } from './index'
+import { CKConnection } from '../src/index'
 
 declare module '@nuxt/vue-app' {
   interface Context {

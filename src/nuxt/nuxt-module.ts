@@ -14,7 +14,7 @@ export default function CloudKitModule(this: any, options: any) {
   }
 
   this.addPlugin({
-    src: path.resolve(__dirname, './nuxt-plugin.ts'),
+    src: path.resolve(__dirname, './nuxt-plugin.js'),
     options
   })
 }
