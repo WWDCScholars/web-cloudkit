@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-pre.9](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.8...v1.0.0-pre.9) (2019-05-13)
+
+
+### Bug Fixes
+
+* Export TeamMember ([3a21f98](https://github.com/WWDCScholars/web-cloudkit/commit/3a21f98))
+
+
+
 ## [1.0.0-pre.8](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.7...v1.0.0-pre.8) (2019-05-13)
 
 
