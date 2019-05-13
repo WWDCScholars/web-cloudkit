@@ -7,5 +7,5 @@ export default class TeamMember extends Record {
   @Field public birthday!: number
   @Field public biography!: string
   @Field public picture!: CloudKit.Asset
-  @Field public scholar!: CloudKit.Reference
+  @Field public scholar?: CloudKit.Reference
 }
