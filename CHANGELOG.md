@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-pre.10](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.9...v1.0.0-pre.10) (2019-05-13)
+
+
+### Bug Fixes
+
+* Made TeamMember scholar property optional ([2c4c982](https://github.com/WWDCScholars/web-cloudkit/commit/2c4c982))
+
+
+
 ## [1.0.0-pre.9](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.8...v1.0.0-pre.9) (2019-05-13)
 
 
