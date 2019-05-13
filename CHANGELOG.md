@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-pre.8](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.7...v1.0.0-pre.8) (2019-05-13)
+
+
+### Features
+
+* Added TeamMember model ([9998d17](https://github.com/WWDCScholars/web-cloudkit/commit/9998d17))
+* Specify path when deleting cookies ([44fabbb](https://github.com/WWDCScholars/web-cloudkit/commit/44fabbb))
+
+
+
 ## [1.0.0-pre.7](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.6...v1.0.0-pre.7) (2019-05-11)
 
 
