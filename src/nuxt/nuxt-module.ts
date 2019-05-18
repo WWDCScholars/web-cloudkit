@@ -13,8 +13,10 @@ export default function CloudKitModule(this: any, options: any) {
     throw new Error('[CloudKit] environment missing')
   }
 
-  this.addPlugin({
-    src: path.resolve(__dirname, './nuxt-plugin.js'),
-    options
-  })
+  if (this.options.dev || this.options._start) {
+    this.addPlugin({
+      src: path.resolve(__dirname, './nuxt-plugin.js'),
+      options
+    })
+  }
 }
