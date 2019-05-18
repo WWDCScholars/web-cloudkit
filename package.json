@@ -17,7 +17,7 @@
   "scripts": {
     "build": "tsc",
     "release": "standard-version",
-    "prerelease": "standard-version --prerelease pre"
+    "release:pre": "standard-version --prerelease pre"
   },
   "files": [
     "dist/**",
