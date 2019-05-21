@@ -1,4 +1,4 @@
-import CloudKit from 'tsl-apple-cloudkit'
+import { CloudKit } from '.'
 import AuthTokenStore from './AuthTokenStore'
 import { EventEmitter } from 'events'
 
