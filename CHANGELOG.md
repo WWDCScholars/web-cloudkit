@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.14...v1.0.0) (2019-05-30)
+
+
+### Bug Fixes
+
+* Scholar ref in ScholarPrivate is non-null ([c30eb19](https://github.com/WWDCScholars/web-cloudkit/commit/c30eb19))
+
+
+### Features
+
+* Add loaded ScholarPrivate property ([4c57ac0](https://github.com/WWDCScholars/web-cloudkit/commit/4c57ac0))
+
+
+
 ## [1.0.0-pre.14](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.13...v1.0.0-pre.14) (2019-05-21)
 
 
