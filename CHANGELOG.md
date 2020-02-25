@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0...v1.1.0) (2020-02-25)
+
+
+### Bug Fixes
+
+* Fix vuex module augmentation ([b954b5d](https://github.com/WWDCScholars/web-cloudkit/commit/b954b5d))
+
+
+### Features
+
+* Add status field to WWDCYearInfio ([56297ea](https://github.com/WWDCScholars/web-cloudkit/commit/56297ea))
+* Make acceptanceEmail field optional ([804e9f8](https://github.com/WWDCScholars/web-cloudkit/commit/804e9f8))
+
+
+
 ## [1.0.0](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0-pre.14...v1.0.0) (2019-05-30)
 
 
