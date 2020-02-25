@@ -8,6 +8,7 @@ export default class WWDCYearInfo extends Record {
   @Field public acceptanceEmail?: CloudKit.Asset
   @Field public appliedAs!: ('student' | 'stem' | 'both')
   @Field public description?: string
+  @Field public status?: ('approved' | 'rejected' | 'pending')
   @Field public screenshots?: CloudKit.Asset[]
   @Field public githubLink?: string
   @Field public videoLink?: string
