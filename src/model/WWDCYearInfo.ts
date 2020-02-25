@@ -5,7 +5,7 @@ export default class WWDCYearInfo extends Record {
 
   @Field public scholar!: CloudKit.Reference
   @Field public year!: CloudKit.Reference
-  @Field public acceptanceEmail!: CloudKit.Asset
+  @Field public acceptanceEmail?: CloudKit.Asset
   @Field public appliedAs!: ('student' | 'stem' | 'both')
   @Field public description?: string
   @Field public screenshots?: CloudKit.Asset[]
