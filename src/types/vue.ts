@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import { CKConnection } from '@wwdcscholars/cloudkit'
 
 declare module '@nuxt/vue-app' {
