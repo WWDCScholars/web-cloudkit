@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/WWDCScholars/web-cloudkit/compare/v1.1.0...v1.2.0) (2020-04-10)
+
+
+### Features
+
+* Add GDPRRequest type ([f28cf07](https://github.com/WWDCScholars/web-cloudkit/commit/f28cf07))
+* Add review fields to WWDCYearInfo ([0ef9b71](https://github.com/WWDCScholars/web-cloudkit/commit/0ef9b71))
+
+
+
 ## [1.1.0](https://github.com/WWDCScholars/web-cloudkit/compare/v1.0.0...v1.1.0) (2020-02-25)
 
 
