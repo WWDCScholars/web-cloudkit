@@ -14,4 +14,6 @@ export default class WWDCYearInfo extends Record {
   @Field public videoLink?: string
   @Field public appstoreLink?: string
   @Field public appType?: ('both' | 'offline' | 'online')
+  @Field public reviewedAt?: number
+  @Field public reviewedBy?: CloudKit.Reference
 }
