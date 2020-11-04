@@ -1,6 +1,6 @@
-import CKConnection from './CKConnection'
-const ck = new CKConnection()
-export { ck, CKConnection }
+import CKClientConnection from './CKClientConnection'
+const ck = new CKClientConnection()
+export { ck, CKClientConnection }
 
 export { default as CloudKit } from 'tsl-apple-cloudkit'
 

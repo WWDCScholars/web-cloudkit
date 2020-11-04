@@ -1,5 +1,5 @@
 import merge from 'lodash.merge'
-import { ck, CloudKit } from '.'
+import { ck, CloudKit } from './client'
 
 interface RecordBuilder<R> {
   recordType: string

@@ -1,4 +1,4 @@
-import { Record } from '.'
+import { Record } from './client'
 
 export default function FieldDecorator(target: Record, key: string) {
   // property getter

@@ -1,23 +1,23 @@
-import { CKConnection } from '@wwdcscholars/cloudkit'
+import { CKClientConnection } from '@wwdcscholars/cloudkit/client'
 
 declare module '@nuxt/vue-app' {
   interface Context {
-    $ck: CKConnection
+    $ck: CKClientConnection
   }
 }
 
 declare module 'vue/types/vue' {
   interface VueConstructor<V extends Vue> {
-    $ck: CKConnection
+    $ck: CKClientConnection
   }
 
   interface Vue {
-    $ck: CKConnection
+    $ck: CKClientConnection
   }
 }
 
 declare module 'vuex' {
   interface Store<S> {
-    $ck: CKConnection
+    $ck: CKClientConnection
   }
 }
