@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/WWDCScholars/web-cloudkit/compare/v1.2.0...v2.0.0) (2020-11-04)
+
+
+### Features
+
+* Add server connection, renaming client connection ([e726164](https://github.com/WWDCScholars/web-cloudkit/commit/e726164))
+
+
+### BREAKING CHANGES
+
+* `CKConnection` is renamed to `CKClientConnection`
+* `queryFromPublicDatabase` returns an empty array instead of throwing an error when the response is empty
+
+
+
 ## [1.2.0](https://github.com/WWDCScholars/web-cloudkit/compare/v1.1.0...v1.2.0) (2020-04-10)
 
 
