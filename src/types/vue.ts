@@ -1,4 +1,4 @@
-import { CKClientConnection } from '@wwdcscholars/cloudkit/client'
+import { CKClientConnection } from '@wwdcscholars/cloudkit'
 
 declare module '@nuxt/vue-app' {
   interface Context {

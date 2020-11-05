@@ -19,7 +19,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@wwdcscholars/cloudkit/client": ["./src/client"]
+      "@wwdcscholars/cloudkit": ["./src"]
     },
     "types": [
       "@types/node",

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import { ck } from '@wwdcscholars/cloudkit/client'
+import { ck } from '@wwdcscholars/cloudkit'
 
 export default function CloudKitPlugin({}, inject: any) {
   ck.configure({

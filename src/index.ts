@@ -1,7 +1,7 @@
 import './types/vue'
 import './types/cloudkit'
 
-export { default } from '../nuxt/nuxt-module'
+export { default } from './nuxt/nuxt-module'
 
 export {
   ck,
@@ -9,6 +9,6 @@ export {
   CKClientConnection,
   Record,
   Field
-} from '../core/client'
+} from './core/client'
 
-export * from '../model'
+export * from './model'
