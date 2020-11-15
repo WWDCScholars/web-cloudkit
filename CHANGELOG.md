@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/WWDCScholars/web-cloudkit/compare/v2.0.2...v3.0.0) (2020-11-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* CloudKit setup is now done via the exported `setup()` method
+
+### Features
+
+* Add newRecordsBatchInPublicDatabase method to CKConnection ([d36f479](https://github.com/WWDCScholars/web-cloudkit/commit/d36f4797506d03ab583ad636f1189b12f8c4d454))
+* Query returns all records, not only first 200 ([ef5f852](https://github.com/WWDCScholars/web-cloudkit/commit/ef5f8522271f9cb5e195de2fe122b4ddb4ecf042))
+
+
+* Properly build typescript, split files correctly, typescript for nuxt stuff ([f86e980](https://github.com/WWDCScholars/web-cloudkit/commit/f86e9808c6dd629a76264646ae0b2f7bfa0ff4a3))
+
 ### [2.0.2](https://github.com/WWDCScholars/web-cloudkit/compare/v2.0.1...v2.0.2) (2020-11-05)
 
 
