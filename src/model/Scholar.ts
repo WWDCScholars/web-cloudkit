@@ -1,11 +1,11 @@
+import CloudKit from 'tsl-apple-cloudkit'
 import {
   ScholarPrivate,
   ScholarSocialMedia,
   WWDCYearInfo,
-  Record,
-  Field,
-  CloudKit
+  Record
 } from '.'
+import { default as Field } from './FieldDecorator'
 
 export type Gender = ('male' | 'female' | 'other')
 

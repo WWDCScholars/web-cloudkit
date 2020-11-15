@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "lib": [
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "removeComments": true,
+    "outDir": "./lib/esm",
+    "baseUrl": ".",
+    "paths": {
+      "@wwdcscholars/cloudkit": ["./src"]
+    },
+    // "types": [
+    //   "@types/node",
+    //   "@nuxt/vue-app",
+    //   "vuex"
+    // ]
+  },
+  "include": [
+    "./src"
+  ]
+}

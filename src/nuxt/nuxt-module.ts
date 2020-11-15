@@ -1,20 +1,32 @@
+import { Module } from '@nuxt/types'
 import path from 'path'
+import { CloudKit } from '..'
 
-export default function CloudKitModule(this: any, options: any) {
-  if (!options.containerIdentifier) {
+interface Options {
+  containerIdentifier: string
+  apiToken: string
+  environment: string
+}
+
+const CloudKitModule: Module<Options> = function (moduleOptions) {
+  if (!moduleOptions.containerIdentifier) {
     throw new Error('[CloudKit] containerIdentifier missing')
   }
 
-  if (!options.apiToken) {
+  if (!moduleOptions.apiToken) {
     throw new Error('[CloudKit] apiToken missing')
   }
 
-  if (!options.environment) {
+  if (!moduleOptions.environment) {
     throw new Error('[CloudKit] environment missing')
   }
 
   this.addPlugin({
     src: path.resolve(__dirname, './nuxt-plugin.js'),
-    options
+    options: moduleOptions
   })
 }
+
+export default CloudKitModule
+
+export const meta = require('../../package.json')

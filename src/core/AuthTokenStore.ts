@@ -14,14 +14,14 @@ export default class AuthTokenStore {
     document.cookie = `${containerIdentifier}=${authToken || ''}; expires=${date.toUTCString()}; path=/`
   }
 
-  getToken(containerIdentifier: string): string | null {
+  getToken(containerIdentifier: string): string {
     const value = '; ' + document.cookie
     const parts = value.split('; ' + containerIdentifier + '=')
 
     if (parts.length === 2) {
-      return parts.pop()!.split(';').shift() || null
+      return (parts.pop()!.split(';').shift() || null) as string
     }
 
-    return null
+    return null as unknown as string
   }
 }

@@ -1,12 +1,8 @@
 import CloudKit from 'tsl-apple-cloudkit'
 import { EventEmitter } from 'events'
 
-export default class CKConnection extends EventEmitter {
+export default abstract class CKConnection extends EventEmitter {
   protected instance!: CloudKit.CloudKit
-
-  public constructor () {
-    super()
-  }
 
   public get defaultContainer(): CloudKit.Container {
     return this.instance.getDefaultContainer()

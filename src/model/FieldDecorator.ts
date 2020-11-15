@@ -1,4 +1,4 @@
-import { Record } from './client'
+import { Record } from '.'
 
 export default function FieldDecorator(target: Record, key: string) {
   // property getter
@@ -13,7 +13,7 @@ export default function FieldDecorator(target: Record, key: string) {
   }
 
   // delete property
-  if (delete target[key]) {
+  if (delete (target as { [key: string]: any })[key]) {
     // create new property with getter and setter
     Object.defineProperty(target, key, {
       get: getter,

@@ -9,24 +9,21 @@ export interface CloudKitConfig {
 }
 
 export default class CKClientConnection extends CKConnection {
-  public configure(config: CloudKitConfig) {
+  public constructor(config: CloudKit.ClientContainerConfig) {
+    super()
+
+    config.apiTokenAuth.persist = true
+
     this.instance = CloudKit.configure({
-      containers: [{
-        containerIdentifier: config.containerIdentifier,
-        apiTokenAuth: {
-          apiToken: config.apiToken,
-          persist: true
-        },
-        environment: config.environment
-      }],
+      containers: [config],
       services: {
         authTokenStore: new AuthTokenStore()
       }
-    } as any)
+    })
   }
 
   public get defaultAuth(): any {
-    return this.defaultContainer['_auth']
+    return (this.defaultContainer as any)['_auth']
   }
 
   public async setUpAuth(): Promise<CloudKit.UserIdentity | undefined> {
@@ -46,7 +43,7 @@ export default class CKClientConnection extends CKConnection {
     this.defaultAuth.signOut()
   }
 
-  private gotoAuthenticatedState(userIdentity: CloudKit.UserIdentity) {
+  private gotoAuthenticatedState(userIdentity: CloudKit.UserIdentity): CloudKit.Promise<undefined, CloudKit.CKError> {
     this.emit('authenticated', userIdentity)
 
     return this.defaultContainer
@@ -54,9 +51,10 @@ export default class CKClientConnection extends CKConnection {
       .then(this.gotoUnauthenticatedState.bind(this))
   }
 
-  private gotoUnauthenticatedState(error?: CloudKit.CKError) {
+  private gotoUnauthenticatedState(error?: CloudKit.CKError): CloudKit.Promise<CloudKit.UserIdentity, CloudKit.CKError> {
     if (error) console.warn(error) // FIXME: remove
     this.emit('unauthenticated', this.defaultContainer)
+
 
     return this.defaultContainer
       .whenUserSignsIn()

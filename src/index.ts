@@ -1,14 +1,8 @@
-import './types/vue'
 import './types/cloudkit'
 
 export { default } from './nuxt/nuxt-module'
 
-export {
-  ck,
-  CloudKit,
-  CKClientConnection,
-  Record,
-  Field
-} from './core/client'
+export * from './core/index_client'
+export * from './model/index'
 
-export * from './model'
+export { default as CloudKit } from 'tsl-apple-cloudkit'

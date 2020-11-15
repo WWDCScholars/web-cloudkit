@@ -1,8 +1,6 @@
-import {
-  Record,
-  Field,
-  CloudKit
-} from '.'
+import CloudKit from 'tsl-apple-cloudkit'
+import { Record } from '.'
+import { default as Field } from './FieldDecorator'
 
 export default class GDPRRequest extends Record {
   static recordType = 'GDPRRequest'

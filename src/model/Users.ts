@@ -1,6 +1,8 @@
-import { Users as _Users } from '../core/client'
-import { Field, CloudKit } from '.'
+import CloudKit from 'tsl-apple-cloudkit'
+import { Record } from '.'
+import { default as Field } from './FieldDecorator'
 
-export default class Users extends _Users {
+export default class Users extends Record {
+  static recordType = 'Users'
   @Field public scholar?: CloudKit.Reference
 }

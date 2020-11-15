@@ -1,4 +1,5 @@
-import { Record, Field } from '.'
+import { Record } from '.'
+import { default as Field } from './FieldDecorator'
 
 export default class WWDCYear extends Record {
   static recordType = 'WWDCYear'

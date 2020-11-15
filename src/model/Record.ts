@@ -1,5 +1,6 @@
+import CloudKit from 'tsl-apple-cloudkit'
 import merge from 'lodash.merge'
-import { ck, CloudKit } from './client'
+import { connection } from '../core/connectionInstance'
 
 interface RecordBuilder<R> {
   recordType: string
@@ -57,7 +58,9 @@ export default class Record implements CloudKit.RecordLike {
     this: RecordBuilder<T>,
     recordName: string
   ): Promise<T> {
-    const record = await ck.fetchFromPublicDatabase(recordName)
+    Record.checkConnection()
+
+    const record = await connection.fetchFromPublicDatabase(recordName)
     return this.fromRecordReceived(record)
   }
 
@@ -66,7 +69,9 @@ export default class Record implements CloudKit.RecordLike {
     query: CloudKit.QueryBase,
     options?: CloudKit.RecordFetchOptions
   ): Promise<T[]> {
-    const records = await ck.queryFromPublicDatabase({
+    Record.checkConnection()
+
+    const records = await connection.queryFromPublicDatabase({
       ...query,
       recordType: this.recordType
     }, options)
@@ -77,21 +82,25 @@ export default class Record implements CloudKit.RecordLike {
     this: RecordBuilder<T>,
     record: CloudKit.RecordToCreateBase
   ): Promise<T> {
+    Record.checkConnection()
+
     const recordToCreate: CloudKit.RecordToCreate = {
       recordType: this.recordType,
       ...record
     }
-    const createdRecord = await ck.createOrUpdateRecordInPublicDatabase(recordToCreate)
+    const createdRecord = await connection.createOrUpdateRecordInPublicDatabase(recordToCreate)
     return this.fromRecordReceived(createdRecord)
   }
 
   public async delete(): Promise<void> {
-    await ck.deleteRecordFromPublicDatabase(this.recordName)
+    Record.checkConnection()
+
+    await connection.deleteRecordFromPublicDatabase(this.recordName)
   }
 
-  public async save(): Promise<void> {
+  public get recordToSave(): CloudKit.RecordToSave {
     if (!this.recordName || !this.recordChangeTag) {
-      throw new Error('Cannot save Record without recordName or recordChangeTag')
+      throw new Error('Cannot get recordToSave without recordName or recordChangeTag')
     }
 
     const Type = <typeof Record>this.constructor
@@ -102,23 +111,33 @@ export default class Record implements CloudKit.RecordLike {
       fields: {}
     }
 
-    // insert updated fields
     for (const key of this.updatedKeys) {
-      recordToSave.fields[key] = this.fields[key]
+      (recordToSave.fields as RecordFields)[key] = this.fields[key]
     }
 
+    return recordToSave
+  }
+
+  public async save(): Promise<void> {
+    Record.checkConnection()
+
     // save record
-    const savedRecord = await ck.createOrUpdateRecordInPublicDatabase(recordToSave)
+    const savedRecord = await connection.createOrUpdateRecordInPublicDatabase(this.recordToSave)
 
     // update this with new record change tag
     this.recordChangeTag = savedRecord.recordChangeTag
   }
 
-  public setFields(fields: object) {
+  public setFields(fields: RecordFields) {
     for (const key in fields) {
       this.fields[key] = fields[key]
       this.updatedKeys.push(key)
     }
   }
 
+  private static checkConnection() {
+    if (!connection) {
+      throw new Error('CloudKit not initialized; use the setup function')
+    }
+  }
 }
