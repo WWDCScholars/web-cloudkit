@@ -22,12 +22,15 @@ export default abstract class CKConnection extends EventEmitter {
   }
 
   public async queryFromPublicDatabase(query: CloudKit.Query, options?: CloudKit.RecordFetchOptions): Promise<CloudKit.RecordReceived[]> {
-    const response = await this.publicDatabase.performQuery(query, options)
-    if (!response.records) {
-      return []
-    }
+    let records: CloudKit.RecordReceived[] = []
 
-    return response.records
+    let current: CloudKit.Query | CloudKit.QueryResponse = query
+    do {
+      current = await this.publicDatabase.performQuery(current, options)
+      records.push(...current.records as CloudKit.RecordReceived[])
+    } while (current.moreComing)
+
+    return records
   }
 
   public async createOrUpdateRecordInPublicDatabase(record: CloudKit.RecordToCreate | CloudKit.RecordToSave): Promise<CloudKit.RecordReceived> {
