@@ -19,12 +19,7 @@
     "baseUrl": ".",
     "paths": {
       "@wwdcscholars/cloudkit": ["./src"]
-    },
-    // "types": [
-    //   "@types/node",
-    //   "@nuxt/vue-app",
-    //   "vuex"
-    // ]
+    }
   },
   "include": [
     "./src"
