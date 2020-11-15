@@ -44,4 +44,8 @@ export default abstract class CKConnection extends EventEmitter {
   public async deleteRecordFromPublicDatabase(record: string): Promise<void> {
     await this.publicDatabase.deleteRecords([record])
   }
+
+  public newRecordsBatchInPublicDatabase(options?: CloudKit.RecordModifyOptions): CloudKit.RecordsBatchBuilder {
+    return this.publicDatabase.newRecordsBatch(options)
+  }
 }
