@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.1.1](https://github.com/WWDCScholars/web-cloudkit/compare/v3.1.0...v3.1.1) (2020-11-28)
+
+
+### Bug Fixes
+
+* Export missing RecordField type ([74665bc](https://github.com/WWDCScholars/web-cloudkit/commit/74665bca8783363c76967430e90ac7ca05cfa7ad))
+* Use correct nuxt module meta require path ([966e627](https://github.com/WWDCScholars/web-cloudkit/commit/966e6276f5e67cb76892a94a4b62c56d7065e21d))
+
 ## [3.1.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.0.0...v3.1.0) (2020-11-28)
 
 
