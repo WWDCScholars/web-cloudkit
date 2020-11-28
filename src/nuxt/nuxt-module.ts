@@ -29,4 +29,4 @@ const CloudKitModule: Module<Options> = function (moduleOptions) {
 
 export default CloudKitModule
 
-export const meta = require('../../package.json')
+export const meta = require('../../../package.json')
