@@ -11,7 +11,7 @@ export default class AuthTokenStore {
     }
 
     // set the cookie
-    document.cookie = `${containerIdentifier}=${authToken || ''}; expires=${date.toUTCString()}; path=/`
+    document.cookie = `${containerIdentifier}=${authToken || ''}; expires=${date.toUTCString()}; path=/; SameSite=Strict; Secure`
   }
 
   getToken(containerIdentifier: string): string {
