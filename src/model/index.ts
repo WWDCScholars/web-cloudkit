@@ -1,4 +1,4 @@
-export { default as Record } from './Record'
+export { default as Record, RecordFields } from './Record'
 export { default as Users } from './Users'
 export { default as Scholar } from './Scholar'
 export { default as ScholarPrivate } from './ScholarPrivate'
