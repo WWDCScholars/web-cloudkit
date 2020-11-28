@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.0.0...v3.1.0) (2020-11-28)
+
+
+### Features
+
+* Add SameSite and Secure attributes to cookie ([cc59f6b](https://github.com/WWDCScholars/web-cloudkit/commit/cc59f6b22554356f5c2f74482d997daf00e14b62))
+
 ## [3.0.0](https://github.com/WWDCScholars/web-cloudkit/compare/v2.0.2...v3.0.0) (2020-11-15)
 
 
