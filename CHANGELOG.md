@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.1.1...v3.2.0) (2020-12-12)
+
+
+### Features
+
+* Add optional connection parameter to connection methods ([a7da5a2](https://github.com/WWDCScholars/web-cloudkit/commit/a7da5a298fb51a823102502569ac679854c4b690))
+
 ### [3.1.1](https://github.com/WWDCScholars/web-cloudkit/compare/v3.1.0...v3.1.1) (2020-11-28)
 
 
