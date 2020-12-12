@@ -1,6 +1,7 @@
 import CloudKit from 'tsl-apple-cloudkit'
 import merge from 'lodash.merge'
-import { connection } from '../core/connectionInstance'
+import CKConnection from '../core/CKConnection'
+import { connection as globalConnection } from '../core/connectionInstance'
 
 interface RecordBuilder<R> {
   recordType: string
@@ -56,9 +57,10 @@ export default class Record implements CloudKit.RecordLike {
 
   public static async fetch<T extends Record>(
     this: RecordBuilder<T>,
-    recordName: string
+    recordName: string,
+    connection: CKConnection = globalConnection
   ): Promise<T> {
-    Record.checkConnection()
+    Record.checkConnection(connection)
 
     const record = await connection.fetchFromPublicDatabase(recordName)
     return this.fromRecordReceived(record)
@@ -67,9 +69,10 @@ export default class Record implements CloudKit.RecordLike {
   public static async query<T extends Record>(
     this: RecordBuilder<T>,
     query: CloudKit.QueryBase,
-    options?: CloudKit.RecordFetchOptions
+    options?: CloudKit.RecordFetchOptions,
+    connection: CKConnection = globalConnection
   ): Promise<T[]> {
-    Record.checkConnection()
+    Record.checkConnection(connection)
 
     const records = await connection.queryFromPublicDatabase({
       ...query,
@@ -80,9 +83,10 @@ export default class Record implements CloudKit.RecordLike {
 
   public static async create<T extends Record>(
     this: RecordBuilder<T>,
-    record: CloudKit.RecordToCreateBase
+    record: CloudKit.RecordToCreateBase,
+    connection: CKConnection = globalConnection
   ): Promise<T> {
-    Record.checkConnection()
+    Record.checkConnection(connection)
 
     const recordToCreate: CloudKit.RecordToCreate = {
       recordType: this.recordType,
@@ -92,8 +96,8 @@ export default class Record implements CloudKit.RecordLike {
     return this.fromRecordReceived(createdRecord)
   }
 
-  public async delete(): Promise<void> {
-    Record.checkConnection()
+  public async delete(connection: CKConnection = globalConnection): Promise<void> {
+    Record.checkConnection(connection)
 
     await connection.deleteRecordFromPublicDatabase(this.recordName)
   }
@@ -118,8 +122,8 @@ export default class Record implements CloudKit.RecordLike {
     return recordToSave
   }
 
-  public async save(): Promise<void> {
-    Record.checkConnection()
+  public async save(connection: CKConnection = globalConnection): Promise<void> {
+    Record.checkConnection(connection)
 
     // save record
     const savedRecord = await connection.createOrUpdateRecordInPublicDatabase(this.recordToSave)
@@ -135,7 +139,7 @@ export default class Record implements CloudKit.RecordLike {
     }
   }
 
-  private static checkConnection() {
+  private static checkConnection(connection: CKConnection = globalConnection) {
     if (!connection) {
       throw new Error('CloudKit not initialized; use the setup function')
     }
