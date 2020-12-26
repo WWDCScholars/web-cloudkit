@@ -15,6 +15,7 @@
     "noImplicitAny": true,
     "declaration": true,
     "removeComments": true,
+    "sourceMap": true,
     "outDir": "./lib/esm",
     "baseUrl": ".",
     "paths": {
