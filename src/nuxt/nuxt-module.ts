@@ -1,29 +1,32 @@
-import { Module } from '@nuxt/types'
 import path from 'path'
-import { CloudKit } from '..'
-
-interface Options {
-  containerIdentifier: string
-  apiToken: string
-  environment: string
-}
+import defu from 'defu'
+import { Module } from '@nuxt/types'
+import Options from './nuxt-options'
 
 const CloudKitModule: Module<Options> = function (moduleOptions) {
-  if (!moduleOptions.containerIdentifier) {
+  const options = defu({
+    ...this.options.cloudKit,
+    ...moduleOptions
+  })
+
+  if (!options.containerIdentifier) {
     throw new Error('[CloudKit] containerIdentifier missing')
   }
 
-  if (!moduleOptions.apiToken) {
+  if (!options.apiToken) {
     throw new Error('[CloudKit] apiToken missing')
   }
 
-  if (!moduleOptions.environment) {
+  if (!options.environment) {
     throw new Error('[CloudKit] environment missing')
   }
 
   this.addPlugin({
     src: path.resolve(__dirname, './nuxt-plugin.js'),
-    options: moduleOptions
+    mode: 'client',
+    ssr: false,
+    fileName: 'wwdcscholars-cloudkit.client.js',
+    options
   })
 }
 

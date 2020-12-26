@@ -1,4 +1,5 @@
 import './types/cloudkit'
+import './types/vue'
 
 export { default } from './nuxt/nuxt-module'
 
