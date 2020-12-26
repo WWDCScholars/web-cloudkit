@@ -25,6 +25,7 @@
     "release:pre": "standard-version --prerelease pre"
   },
   "dependencies": {
+    "crypto": "^1.0.1",
     "events": "^3.2.0",
     "lodash.merge": "^4.6.2",
     "path": "^0.12.7",
