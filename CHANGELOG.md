@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.2.0...v3.3.0) (2020-12-26)
+
+
+### Features
+
+* Add asset uploading to CKServerConnection ([78fd701](https://github.com/WWDCScholars/web-cloudkit/commit/78fd7015a34eca549711f7d7331086ddf7a81661))
+* Add support for cloudKit configuration property in nuxt.config.js ([c82756e](https://github.com/WWDCScholars/web-cloudkit/commit/c82756e279f2b1a60b2fe5c3f42680b8bb910800))
+* Optionally set updated keys in clone ([9e05dff](https://github.com/WWDCScholars/web-cloudkit/commit/9e05dffeb9f94af58acfbb360b49f3d2b0dad251))
+
 ## [3.2.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.1.1...v3.2.0) (2020-12-12)
 
 
