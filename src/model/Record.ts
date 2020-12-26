@@ -29,9 +29,14 @@ export default class Record implements CloudKit.RecordLike {
 
   constructor() {}
 
-  public static clone<T extends Record>(instance: T): T {
+  public static clone<T extends Record>(instance: T, setUpdatedKeys: boolean = false): T {
     const copy = new (instance.constructor as { new(): T })()
     merge(copy, instance)
+
+    if (setUpdatedKeys === true) {
+      copy.updatedKeys = Object.keys(copy.fields)
+    }
+
     return copy
   }
 
