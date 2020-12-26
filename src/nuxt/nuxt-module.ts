@@ -3,11 +3,17 @@ import defu from 'defu'
 import { Module } from '@nuxt/types'
 import Options from './nuxt-options'
 
+const defaultOptions: Options = {
+  containerIdentifier: undefined,
+  apiToken: undefined,
+  environment: undefined
+}
+
 const CloudKitModule: Module<Options> = function (moduleOptions) {
   const options = defu({
     ...this.options.cloudKit,
     ...moduleOptions
-  })
+  }, defaultOptions)
 
   if (!options.containerIdentifier) {
     throw new Error('[CloudKit] containerIdentifier missing')

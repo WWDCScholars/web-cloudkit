@@ -1,5 +1,5 @@
 export default interface Options {
-  containerIdentifier: string
-  apiToken: string
-  environment: string
+  containerIdentifier?: string
+  apiToken?: string
+  environment?: string
 }
