@@ -19,7 +19,7 @@
     "lib/"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
+    "build": "rm -rf lib && tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
     "prepublishOnly": "npm run build",
     "release": "standard-version",
     "release:pre": "standard-version --prerelease pre"
