@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.1](https://github.com/WWDCScholars/web-cloudkit/compare/v3.4.0...v3.4.1) (2020-12-30)
+
+
+### Bug Fixes
+
+* Check for recordName before deleting ([2280dac](https://github.com/WWDCScholars/web-cloudkit/commit/2280dac551be09d35389e78c66590cbe3f3473df))
+
 ## [3.4.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.3.2...v3.4.0) (2020-12-30)
 
 
