@@ -102,6 +102,10 @@ export default class Record implements CloudKit.RecordLike {
   }
 
   public async delete(connection: CKConnection = globalConnection): Promise<void> {
+    if (!this.recordName) {
+      throw new Error('Can\'t delete record without a recordName')
+    }
+
     Record.checkConnection(connection)
 
     await connection.deleteRecordFromPublicDatabase(this.recordName)
