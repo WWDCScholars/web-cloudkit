@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.3.2...v3.4.0) (2020-12-30)
+
+
+### Features
+
+* Return RecordToSave or RecordToCreate from Record.recordToSave ([a6f8013](https://github.com/WWDCScholars/web-cloudkit/commit/a6f801349e2f67dea1ac465b05883ff4603fc945))
+
 ### [3.3.2](https://github.com/WWDCScholars/web-cloudkit/compare/v3.3.1...v3.3.2) (2020-12-29)
 
 ### [3.3.1](https://github.com/WWDCScholars/web-cloudkit/compare/v3.3.0...v3.3.1) (2020-12-26)
