@@ -17,7 +17,7 @@ export default class Record implements CloudKit.RecordLike {
   created?: { timestamp: number; user: string; }
   modified?: { timestamp: number; user: string; }
   recordType!: string
-  recordName!: string
+  recordName?: string
   recordChangeTag?: string
   deleted?: boolean
   shortGUID?: string
@@ -107,13 +107,9 @@ export default class Record implements CloudKit.RecordLike {
     await connection.deleteRecordFromPublicDatabase(this.recordName)
   }
 
-  public get recordToSave(): CloudKit.RecordToSave {
-    if (!this.recordName || !this.recordChangeTag) {
-      throw new Error('Cannot get recordToSave without recordName or recordChangeTag')
-    }
-
+  public get recordToSave(): CloudKit.RecordToSave | CloudKit.RecordToCreate {
     const Type = <typeof Record>this.constructor
-    const recordToSave: CloudKit.RecordToSave = {
+    const recordToSave: CloudKit.RecordToSave | CloudKit.RecordToCreate = {
       recordType: Type.recordType,
       recordName: this.recordName,
       recordChangeTag: this.recordChangeTag,
