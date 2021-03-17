@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0-pre.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.4.1...v3.5.0-pre.0) (2021-03-17)
+
+
+### Features
+
+* Add server convenience import ([4cbda54](https://github.com/WWDCScholars/web-cloudkit/commit/4cbda54fdf38f396836ff2808ed4a3718a72bbc5))
+
+
+### Bug Fixes
+
+* Change cookie SameSite policy to Lax ([70d4b74](https://github.com/WWDCScholars/web-cloudkit/commit/70d4b7433f410428776f9f0ac917a34e0ecec874))
+
 ### [3.4.1](https://github.com/WWDCScholars/web-cloudkit/compare/v3.4.0...v3.4.1) (2020-12-30)
 
 
