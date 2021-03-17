@@ -16,7 +16,8 @@
   "module": "./lib/esm/index.js",
   "types": "./lib/cjs/index.d.ts",
   "files": [
-    "lib/"
+    "lib/",
+    "server.ts"
   ],
   "scripts": {
     "build": "rm -rf lib && tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
