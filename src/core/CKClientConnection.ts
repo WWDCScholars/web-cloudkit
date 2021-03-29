@@ -1,6 +1,6 @@
 import CloudKit from 'tsl-apple-cloudkit'
 import CKConnection from './CKConnection'
-import AuthTokenStore from './AuthTokenStore'
+import AuthTokenStore, { AuthTokenStoreOptions } from './AuthTokenStore'
 
 export interface CloudKitConfig {
   containerIdentifier: string
@@ -9,7 +9,7 @@ export interface CloudKitConfig {
 }
 
 export default class CKClientConnection extends CKConnection {
-  public constructor(config: CloudKit.ClientContainerConfig) {
+  public constructor(config: CloudKit.ClientContainerConfig, authTokenStoreOptions: AuthTokenStoreOptions = {}) {
     super()
 
     config.apiTokenAuth.persist = true
@@ -17,7 +17,7 @@ export default class CKClientConnection extends CKConnection {
     this.instance = CloudKit.configure({
       containers: [config],
       services: {
-        authTokenStore: new AuthTokenStore()
+        authTokenStore: new AuthTokenStore(authTokenStoreOptions)
       }
     })
   }

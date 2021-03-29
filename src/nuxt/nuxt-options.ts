@@ -1,5 +1,11 @@
 export default interface Options {
-  containerIdentifier?: string
-  apiToken?: string
-  environment?: string
+  container: {
+    containerIdentifier: string
+    apiToken: string
+    environment: string
+  }
+  authTokenStore?: {
+    expires?: number
+    secure?: boolean
+  }
 }

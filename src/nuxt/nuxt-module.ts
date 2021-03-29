@@ -4,9 +4,15 @@ import { Module } from '@nuxt/types'
 import Options from './nuxt-options'
 
 const defaultOptions: Options = {
-  containerIdentifier: undefined,
-  apiToken: undefined,
-  environment: undefined
+  container: {
+    containerIdentifier: undefined as any,
+    apiToken: undefined as any,
+    environment: undefined as any
+  },
+  authTokenStore: {
+    expires: undefined,
+    secure: undefined
+  }
 }
 
 const CloudKitModule: Module<Options> = function (moduleOptions) {
@@ -15,15 +21,15 @@ const CloudKitModule: Module<Options> = function (moduleOptions) {
     ...moduleOptions
   }, defaultOptions)
 
-  if (!options.containerIdentifier) {
+  if (!options.container.containerIdentifier) {
     throw new Error('[CloudKit] containerIdentifier missing')
   }
 
-  if (!options.apiToken) {
+  if (!options.container.apiToken) {
     throw new Error('[CloudKit] apiToken missing')
   }
 
-  if (!options.environment) {
+  if (!options.container.environment) {
     throw new Error('[CloudKit] environment missing')
   }
 
