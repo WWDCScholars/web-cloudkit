@@ -10,6 +10,7 @@ export default class ScholarSocialMedia extends Record {
   @Field public facebook!: string
   @Field public github!: string
   @Field public imessage!: string
+  @Field public instagram!: string
   @Field public itunes!: string
   @Field public linkedin!: string
   @Field public twitter!: string
