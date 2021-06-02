@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.6.0...v3.7.0) (2021-06-02)
+
+
+### Features
+
+* Add instagram field to social media ([af7a174](https://github.com/WWDCScholars/web-cloudkit/commit/af7a174824347242ebb48aca7ac8605f26335f51))
+
 ## [3.6.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.5.0...v3.6.0) (2021-03-29)
 
 
