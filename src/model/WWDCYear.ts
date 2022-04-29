@@ -7,4 +7,5 @@ export default class WWDCYear extends Record {
   @Field public name!: string
   @Field public year!: string
   @Field public challengeDescription?: string
+  @Field public isHidden!: boolean
 }
