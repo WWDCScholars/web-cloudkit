@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.7.0...v3.8.0) (2022-04-29)
+
+
+### Features
+
+* Add isHidden property to WWDCYear ([e05a795](https://github.com/WWDCScholars/web-cloudkit/commit/e05a795d90c7cc868d6fe36a13dec0ea804249d7))
+
 ## [3.7.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.6.0...v3.7.0) (2021-06-02)
 
 
