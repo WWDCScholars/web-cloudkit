@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.9.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.8.0...v3.9.0) (2022-05-06)
+
+
+### Features
+
+* Add method to fetch multiple records at once ([bc3456b](https://github.com/WWDCScholars/web-cloudkit/commit/bc3456b81677f62d58531568e15e8a77fe3497ee))
+
 ## [3.8.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.7.0...v3.8.0) (2022-04-29)
 
 
