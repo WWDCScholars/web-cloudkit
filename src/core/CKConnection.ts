@@ -21,6 +21,15 @@ export default abstract class CKConnection extends EventEmitter {
     return response.records[0]
   }
 
+  public async fetchRecordsFromPublicDatabase(recordNames: string[]): Promise<CloudKit.RecordReceived[]> {
+    const response = await this.publicDatabase.fetchRecords(recordNames)
+    if (!response.records) {
+      throw new Error(`Empty response when fetching records: ${recordNames}`)
+    }
+
+    return response.records
+  }
+
   public async queryFromPublicDatabase(query: CloudKit.Query, options?: CloudKit.RecordFetchOptions): Promise<CloudKit.RecordReceived[]> {
     let records: CloudKit.RecordReceived[] = []
 
