@@ -6,6 +6,7 @@ export { default as ScholarSocialMedia } from './ScholarSocialMedia'
 export { default as WWDCYear } from './WWDCYear'
 export { default as WWDCYearInfo } from './WWDCYearInfo'
 export { default as TeamMember } from './TeamMember'
+export { default as FAQItem } from './FAQItem'
 export { default as GDPRRequest } from './GDPRRequest'
 
 export { default as Field } from './FieldDecorator'
