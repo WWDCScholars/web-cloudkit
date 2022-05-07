@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.10.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.9.0...v3.10.0) (2022-05-07)
+
+
+### Features
+
+* Add FAQItem record type ([5069f27](https://github.com/WWDCScholars/web-cloudkit/commit/5069f27093dd3ab1cff3ded9c0ddec41c8a9828e))
+* Overridable fieldName in Field property decorator ([41ca36d](https://github.com/WWDCScholars/web-cloudkit/commit/41ca36d31c43009edd199ec3b1294f6c4dda12d1))
+
 ## [3.9.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.8.0...v3.9.0) (2022-05-06)
 
 
