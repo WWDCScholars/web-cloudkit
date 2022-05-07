@@ -1,6 +1,6 @@
 import CloudKit from 'tsl-apple-cloudkit'
 import { Record } from '.'
-import { default as Field } from './FieldDecorator'
+import Field from './FieldDecorator'
 
 export default class WWDCYearInfo extends Record {
   static recordType = 'WWDCYearInfo'

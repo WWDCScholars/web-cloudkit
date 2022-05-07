@@ -5,7 +5,7 @@ import {
   WWDCYearInfo,
   Record
 } from '.'
-import { default as Field } from './FieldDecorator'
+import Field from './FieldDecorator'
 
 export type Gender = ('male' | 'female' | 'other')
 
