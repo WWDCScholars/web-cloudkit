@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.11.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.11.0-pre.0...v3.11.0) (2024-03-27)
+
+
+### Bug Fixes
+
+* Map boolean to number in RecordToSave representation ([338aa58](https://github.com/WWDCScholars/web-cloudkit/commit/338aa5881129b0b13d9c42491fe06d04ef4064ee))
+
 ## [3.11.0-pre.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.10.0...v3.11.0-pre.0) (2024-03-27)
 
 
