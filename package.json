@@ -21,12 +21,11 @@
   ],
   "scripts": {
     "build": "rm -rf lib && tsc -p tsconfig-esm.json && tsc -p tsconfig-cjs.json",
-    "prepublishOnly": "npm run build",
-    "release": "standard-version",
-    "release:pre": "standard-version --prerelease pre"
+    "prepublishOnly": "yarn run build",
+    "release": "commit-and-tag-version",
+    "release:pre": "commit-and-tag-version --prerelease pre"
   },
   "dependencies": {
-    "crypto": "^1.0.1",
     "defu": "^2.0.4",
     "events": "^3.2.0",
     "lodash.merge": "^4.6.2",
@@ -34,14 +33,15 @@
     "tsl-apple-cloudkit": "^0.2.18"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.7",
+    "@nuxt/types": "^2.17.3",
     "@types/events": "^3.0.0",
     "@types/lodash.merge": "^4.6.6",
     "@types/node": "^14.14.6",
     "@types/node-fetch": "^2.5.7",
-    "nuxt": "^2.14.7",
-    "standard-version": "^9.0.0",
-    "typescript": "^4.0.5",
+    "commit-and-tag-version": "^12.2.0",
+    "nuxt": "^2.17.3",
+    "sass": "^1.72.0",
+    "typescript": "^4.2.4",
     "vuex": "^3.5.1"
   },
   "peerDependencies": {
