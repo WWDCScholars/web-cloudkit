@@ -1,6 +1,14 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [3.11.0-pre.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.10.0...v3.11.0-pre.0) (2024-03-27)
+
+
+### Features
+
+* Add distinguished winner field to year info ([2faf73d](https://github.com/WWDCScholars/web-cloudkit/commit/2faf73d9242ee47aaabaf468c0bba1e300a4566f))
+* Add features field to WWDCYear ([a8f3541](https://github.com/WWDCScholars/web-cloudkit/commit/a8f354192c42e8ecbdd8d4d59b0d5c61130062e9))
 
 ## [3.10.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.9.0...v3.10.0) (2022-05-07)
 
