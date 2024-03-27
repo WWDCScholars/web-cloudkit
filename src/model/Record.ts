@@ -121,7 +121,12 @@ export default class Record implements CloudKit.RecordLike {
     }
 
     for (const key of this.updatedKeys) {
-      (recordToSave.fields as RecordFields)[key] = this.fields[key]
+      const fieldValue = this.fields[key]
+      if (typeof fieldValue.value === 'boolean') {
+        fieldValue.value = fieldValue.value === true ? 1 : 0
+      }
+
+      (recordToSave.fields as RecordFields)[key] = fieldValue
     }
 
     return recordToSave
