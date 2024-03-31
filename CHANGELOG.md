@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.12.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.11.0...v3.12.0) (2024-03-31)
+
+
+### Features
+
+* Add BlueSky, Threads & Mastodon ([d365dfc](https://github.com/WWDCScholars/web-cloudkit/commit/d365dfcd44666aa6a2c50b98daf24443669eb076))
+
 ## [3.11.0](https://github.com/WWDCScholars/web-cloudkit/compare/v3.11.0-pre.0...v3.11.0) (2024-03-27)
 
 
