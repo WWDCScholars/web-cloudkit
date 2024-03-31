@@ -15,4 +15,7 @@ export default class ScholarSocialMedia extends Record {
   @Field public linkedin!: string
   @Field public twitter!: string
   @Field public website!: string
+  @Field public bluesky!: string
+  @Field public threads!: string
+  @Field public mastodon!: string
 }
